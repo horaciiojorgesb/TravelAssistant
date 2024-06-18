@@ -1,0 +1,42 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="UnitTests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="UnitTests" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="CountryInfoTest" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="UnitTests.CountryInfoTest.GetcountryInfo" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="GetcountryInfo(&quot;MZ&quot;)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="DestinationListTest" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="UnitTests.DestinationListTest.DestinationExistsOnList" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DestinationExistsOnList(&quot;MZ&quot;,&quot;Mozambique&quot;)" />
+                        <Property Name="DisplayName" Value="DestinationExistsOnList(&quot;SA&quot;,&quot;South Africa&quot;)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
