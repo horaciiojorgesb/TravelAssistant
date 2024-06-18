@@ -25,7 +25,7 @@ const _searcher = () => {
     const filterCountries = () => {
       const filtered = countryList.filter((country) =>
         country.name.toLowerCase().includes(inpusearch_.toLowerCase())
-      );
+      ).slice(0,10);
       setFilteredCountries(filtered);
     };
 

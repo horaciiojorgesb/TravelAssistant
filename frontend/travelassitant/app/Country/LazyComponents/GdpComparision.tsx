@@ -8,7 +8,7 @@ interface Propos
 
 const GdpComparison: React.FC<Propos> = ({ country }) => {
   return (
-    <div className="rounded-lg bg-white shadow-md dark:bg-neutral-700">
+    <div className="rounded-lg bg-white shadow-md dark:bg-blue-300">
       <h2 className="font-bold text-lg mb-4 mt-4 px-4">GDP Comparison from {country?.gdpHistoricalData[country?.gdpHistoricalData.length - 1].year} to {country?.gdpHistoricalData[0].year}</h2>
       <table className="min-w-full bg-white border-gray-200 divide-y divide-gray-200">
         <thead>

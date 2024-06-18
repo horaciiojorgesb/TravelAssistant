@@ -7,7 +7,7 @@ interface Props {
 
 const PopulationComparison: React.FC<Props> = ({ country }) => {
   return (
-    <div className="rounded-lg bg-white shadow-md dark:bg-neutral-700">
+    <div className="rounded-lg bg-white shadow-md dark:bg-blue-300">
       <h2 className="font-bold text-lg mb-4 mt-4 px-4">Population Comparison from {country?.populationHistoricalData[country?.populationHistoricalData.length - 1].year} to {country?.populationHistoricalData[0].year}</h2>
       <table className="min-w-full bg-white border-white-200 divide-y divide-gray-200">
         <thead>

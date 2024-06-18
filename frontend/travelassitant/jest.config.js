@@ -1,19 +1,17 @@
-const nextJest = require('next/jest')
- 
-/** @type {import('jest').Config} */
-const createJestConfig = nextJest({  
-  dir: './',
-})
- 
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './', 
+});
 
 const config = {
-  coverageProvider: 'v8',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  testEnvironment: 'jest-environment-jsdom',
-  present: 'ts-jet',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+  },
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+};
 
-}
- 
-
-module.exports = createJestConfig(config)
+module.exports = createJestConfig(config);

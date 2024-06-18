@@ -28,7 +28,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #000000;
-  display: flex;
+  
   justify-content: center;
   align-items: center;
   text-align: center;
