@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import Link from "next/link";
-import {CountryList} from "./Country/getCountryList";
+import {CountryList} from "./pages/getCountryList";
 import {CountryBasicData} from "./TypeScriptModels/APIDataOperation/Interfaces/CountryBasicData"
 
 const _searcher = () => {
@@ -55,14 +55,14 @@ const _searcher = () => {
         </div>
       </form>
       {inpusearch_.length > 0 && (
-      <div className="block w-full max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-        <ul className="w-full">
+      <div className="block w-full max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-200">
+        <ul className="w-full text-black bg-blue">
           {filteredCountries.map((countryFiltered, index) => (
             <li
-              className="w-full border-b-2 border-neutral-100 border-opacity-100 px-4 py-3 dark:border-opacity-50 hover:bg-white"
+              className="w-full border-b-2 border-neutral-100 border-opacity-100 px-4 py-3 dark:border-opacity-50 hover:bg-blue-300"
               key={index}
             >
-              <Link href={`/Country/${countryFiltered.iso2Code}`}>{countryFiltered.name}</Link>
+              <Link href={`./pages/${countryFiltered.iso2Code}`}>{countryFiltered.name}</Link>
             </li>
           ))}
         </ul>

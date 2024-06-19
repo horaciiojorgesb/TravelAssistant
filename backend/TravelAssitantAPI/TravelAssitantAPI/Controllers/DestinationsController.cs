@@ -91,7 +91,7 @@ namespace TravelAssitantAPI.Controllers
             catch (Exception ex)
             {
                 Log.Fatal("GetCountries - " + ex.Message);
-                return StatusCode(500, $"Unexpected Error occurred while trying to GetCountries - {ex.Message}");
+                return StatusCode(500, $"Unexpected Error occurred while trying to GetCountries, Please try again later.");
             }
 
         }
@@ -163,7 +163,7 @@ namespace TravelAssitantAPI.Controllers
             {
                 Log.Fatal($"Error on GetCountries - {ex.Message} ");
                 _countryInfo.ErrorCode = HttpStatusCode.InternalServerError.ToString();
-                _countryInfo.ErrorMessage = $"Unexpected Error occurred while trying to GetCountries - {ex.Message}";
+                _countryInfo.ErrorMessage = $"Unexpected Error occurred while trying to Country Information. Please try again later.";
                 return StatusCode(500, _countryInfo);
             }
 

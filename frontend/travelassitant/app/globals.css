@@ -22,7 +22,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('./Assets/images/wallpaper.jpg');
+  background-image: url('./assets/images/wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
